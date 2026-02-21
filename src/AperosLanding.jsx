@@ -530,7 +530,7 @@ export default function AperosLanding() {
                 <div className="craft-frame-tl" />
                 <div className="craft-frame-br" />
                 <img
-                  src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=600&h=700&fit=crop"
+                  src="https://www.google.com/imgres?q=talabarteria%20llanera&imgurl=http%3A%2F%2Fartesaniasdecolombia.com.co%2FDocumentos%2FContenido%2F20569_campechana-g.jpg&imgrefurl=https%3A%2F%2Fartesaniasdecolombia.com.co%2FPortalAC%2FPublicacion%2Fel-cuero-para-un-descanso-llanero_1404&docid=AWUwx5Q1N0OT1M&tbnid=RCS3zgq63XQlJM&vet=12ahUKEwj3opH57OmSAxVNSjABHd-1DHIQnPAOegQIGxAB..i&w=843&h=520&hcb=2&ved=2ahUKEwj3opH57OmSAxVNSjABHd-1DHIQnPAOegQIGxAB"
                   alt="Artesano trabajando cuero"
                   className="craft-img"
                   loading="lazy"
