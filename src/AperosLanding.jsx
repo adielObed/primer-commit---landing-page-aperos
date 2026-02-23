@@ -674,7 +674,7 @@ export default function AperosLanding() {
               </div>
               <div className="footer-contact-item">
                 <Phone size={16} className="footer-contact-icon" />
-                <span className="footer-contact-text">+57 3218088933</span>
+                <span className="footer-contact-text">+57 321 8088933</span>
               </div>
               <div className="footer-contact-item">
                 <Mail size={16} className="footer-contact-icon" />
