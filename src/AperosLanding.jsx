@@ -695,7 +695,7 @@ export default function AperosLanding() {
 
       {/* ===== WHATSAPP FAB ===== */}
       <a
-        href="https://wa.me/573001234567"
+        href="https://wa.me/573218088933"
         target="_blank"
         rel="noopener noreferrer"
         className="whatsapp-fab"
