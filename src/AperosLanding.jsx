@@ -670,15 +670,15 @@ export default function AperosLanding() {
               <h3 className="footer-col-title">Contacto</h3>
               <div className="footer-contact-item">
                 <MapPin size={16} className="footer-contact-icon" />
-                <span className="footer-contact-text">Av. Los Llanos #45-67,<br />Villavicencio, Colombia</span>
+                <span className="footer-contact-text">Cra. 23 #7 66,<br />Yopal, Colombia</span>
               </div>
               <div className="footer-contact-item">
                 <Phone size={16} className="footer-contact-icon" />
-                <span className="footer-contact-text">+57 300 123 4567</span>
+                <span className="footer-contact-text">+57 3218088933</span>
               </div>
               <div className="footer-contact-item">
                 <Mail size={16} className="footer-contact-icon" />
-                <span className="footer-contact-text">info@aperospurocoleo.com</span>
+                <span className="footer-contact-text"></span>
               </div>
             </div>
           </div>
