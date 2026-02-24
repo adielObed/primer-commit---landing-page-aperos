@@ -283,7 +283,7 @@ export default function AperosLanding() {
           <div className="topbar">
             <div style={{ display: 'flex', gap: 24 }}>
               <span>🚚 Envíos a toda Colombia y Venezuela</span>
-              <span>📞 +57 300 123 4567</span>
+              <span>📞 +57 321 8088933</span>
             </div>
             <div style={{ display: 'flex', gap: 24 }}>
               <a href="#">Rastrear Pedido</a>
