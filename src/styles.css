@@ -232,7 +232,7 @@ button { font-family: 'Montserrat', sans-serif; cursor: pointer; }
 }
 .hero-bg-img {
   position: absolute; inset: 0;
-  background-image: url('/public/img/fondosom.jpeg');
+  background-image: url('/public/img/logo.png');
   background-size: cover;
   background-position: center right;
   opacity: 0.15;
