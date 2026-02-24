@@ -232,7 +232,7 @@ button { font-family: 'Montserrat', sans-serif; cursor: pointer; }
 }
 .hero-bg-img {
   position: absolute; inset: 0;
-  background-image: url('/img/sombrero2');
+  background-image: url('/public/img/sombreros.jpeg');
   background-size: cover;
   background-position: center right;
   opacity: 0.15;
