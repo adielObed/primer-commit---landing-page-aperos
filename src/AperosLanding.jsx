@@ -530,7 +530,7 @@ export default function AperosLanding() {
                 <div className="craft-frame-tl" />
                 <div className="craft-frame-br" />
                 <img
-                  src="https://www.google.com/imgres?q=talabarteria%20llanera&imgurl=http%3A%2F%2Fartesaniasdecolombia.com.co%2FDocumentos%2FContenido%2F20569_campechana-g.jpg&imgrefurl=https%3A%2F%2Fartesaniasdecolombia.com.co%2FPortalAC%2FPublicacion%2Fel-cuero-para-un-descanso-llanero_1404&docid=AWUwx5Q1N0OT1M&tbnid=RCS3zgq63XQlJM&vet=12ahUKEwj3opH57OmSAxVNSjABHd-1DHIQnPAOegQIGxAB..i&w=843&h=520&hcb=2&ved=2ahUKEwj3opH57OmSAxVNSjABHd-1DHIQnPAOegQIGxAB"
+                  src="/img/talabarteria.jpeg"
                   alt="Artesano trabajando cuero"
                   className="craft-img"
                   loading="lazy"
@@ -684,7 +684,7 @@ export default function AperosLanding() {
           </div>
 
           <div className="footer-bottom">
-            <span className="footer-copy">© 2024 Aperos Puro Coleo. Todos los derechos reservados.</span>
+            <span className="footer-copy">© 2026 Aperos Puro Coleo. Todos los derechos reservados.</span>
             <div className="footer-legal">
               {['Privacidad', 'Términos', 'Cookies'].map(l => <a key={l} href="#">{l}</a>)}
             </div>
