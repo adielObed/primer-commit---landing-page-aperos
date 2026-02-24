@@ -597,7 +597,7 @@ export default function AperosLanding() {
               <div className="newsletter-inner">
                 <p className="section-eyebrow">Comunidad Llanera</p>
                 <h2 className="font-serif" style={{ fontSize: '2.2rem', fontWeight: 700, color: 'var(--text)', marginBottom: 16 }}>
-                  Únete a la Comunidad
+                MI COMUNIDAD VAQUERA
                 </h2>
                 <p className="newsletter-desc">
                   Recibe noticias sobre eventos de coleo, lanzamientos exclusivos y un{' '}
