@@ -78,7 +78,7 @@ const CATEGORIES_DATA = [
   { name: 'Sillas de Montar', count: 12, img: '/img/silla.jpeg' },
   { name: 'Botas & Cotizas',  count: 28, img: '/img/botas.jpeg' },
   { name: 'Frenos & Aperos',  count: 8,  img: '/img/freno.jpeg' },
-  { name: 'Sombreros',        count: 24, img: '/img/sombrero.jpeg' },
+  { name: 'Sombreros',        count: 24, img: '/img/sombreros.jpeg' },
 ];
 
 const TESTIMONIALS_DATA = [
@@ -359,8 +359,8 @@ export default function AperosLanding() {
             </div>
 
             <h1 className="hero-title font-serif animate-fadeInUp anim-delay-2">
-              La Elegancia del{' '}
-              <em className="gold-shimmer">Espíritu Llanero</em>
+              Te vestimos a ti{' '}
+              <em className="gold-shimmer">y a tu caballo</em>
             </h1>
 
             <p className="hero-desc animate-fadeInUp anim-delay-3">
