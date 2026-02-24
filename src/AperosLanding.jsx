@@ -35,14 +35,14 @@ const PRODUCTS = [
     name: 'Sombrero Pelo de Guama', price: '$450.000', oldPrice: null,
     desc: 'Auténtico sombrero llanero fabricado en pelo de guama de primera calidad.',
     rating: 4.5, reviews: 24, category: 'Sombreros',
-    img: 'https://images.unsplash.com/photo-1521369909029-2afed882baee?w=400&h=500&fit=crop',
+    img: '/img/sombrero.jpeg',
   },
   {
     id: 2, badge: null, badgeColor: null, badgeTextColor: null,
     name: 'Silla de Coleo Profesional', price: '$2.800.000', oldPrice: null,
     desc: 'Diseñada para la alta competencia. Fuste anatómico garantizado por 10 años.',
     rating: 5, reviews: 18, category: 'Sillas de Montar',
-    img: 'https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?w=400&h=500&fit=crop',
+    img: '',
   },
   {
     id: 3, badge: '-15% OFF', badgeColor: '#c0392b', badgeTextColor: '#fff',
@@ -75,10 +75,10 @@ const PRODUCTS = [
 ];
 
 const CATEGORIES_DATA = [
-  { name: 'Sillas de Montar', count: 12, img: 'https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?w=400&h=500&fit=crop' },
-  { name: 'Botas & Cotizas',  count: 28, img: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=500&fit=crop' },
-  { name: 'Frenos & Aperos',  count: 8,  img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=500&fit=crop' },
-  { name: 'Sombreros',        count: 24, img: 'https://images.unsplash.com/photo-1521369909029-2afed882baee?w=400&h=500&fit=crop' },
+  { name: 'Sillas de Montar', count: 12, img: '/img/silla.jpeg' },
+  { name: 'Botas & Cotizas',  count: 28, img: '/img/botas.jpeg' },
+  { name: 'Frenos & Aperos',  count: 8,  img: '/img/freno.jpeg' },
+  { name: 'Sombreros',        count: 24, img: '/img/sombrero.jpeg' },
 ];
 
 const TESTIMONIALS_DATA = [
