@@ -27,53 +27,20 @@ import './styles.css';
 // ── Constantes de color (usadas en estilos inline puntuales) ──
 const GOLD = '#d4af37';
 
-// ── Datos ─────────────────────────────────────────────────────
 
-const PRODUCTS = [
-  {
-    id: 1, badge: 'NUEVO', badgeColor: GOLD, badgeTextColor: '#000',
-    name: 'Sombrero Pelo de Guama', price: '$450.000', oldPrice: null,
-    desc: 'Auténtico sombrero llanero fabricado en pelo de guama de primera calidad.',
-    rating: 4.5, reviews: 24, category: 'Sombreros',
-    img: '/img/sombrero.jpeg',
-  },
-  {
-    id: 2, badge: null, badgeColor: null, badgeTextColor: null,
-    name: 'Silla de Coleo Profesional', price: '$2.800.000', oldPrice: null,
-    desc: 'Diseñada para la alta competencia. Fuste anatómico garantizado por 10 años.',
-    rating: 5, reviews: 18, category: 'Sillas de Montar',
-    img: '/img/silla.jpeg',
-  },
-  {
-    id: 3, badge: '-15% OFF', badgeColor: '#c0392b', badgeTextColor: '#fff',
-    name: 'Botas Texanas Luxury', price: '$680.000', oldPrice: '$800.000',
-    desc: 'Cuero de avestruz legítimo con bordados en hilo de seda. Comodidad todo el día.',
-    rating: 4.5, reviews: 42, category: 'Botas',
-    img: '/img/botascoti.jpeg',
-  },
-  {
-    id: 4, badge: null, badgeColor: null, badgeTextColor: null,
-    name: 'Freno Artesanal Plata', price: '$320.000', oldPrice: null,
-    desc: 'Plata fina con acabados a mano. Pieza única de maestro talabartero.',
-    rating: 5, reviews: 11, category: 'Frenos & Bocados',
-    img: '/img/freno2.jpeg',
-  },
-  {
-    id: 5, badge: 'EXCLUSIVO', badgeColor: GOLD, badgeTextColor: '#000',
-    name: 'Gorra', price: '$185.000', oldPrice: null,
-    desc: 'Tejido artesanal en cuero crudo, frescas y resistentes para el trabajo en llano.',
-    rating: 4, reviews: 33, category: 'Cotizas',
-    img: '/img/gorras.jpeg',
-  },
-  {
-    id: 6, badge: null, badgeColor: null, badgeTextColor: null,
-    name: 'Correas de cuero', price: '$95.000', oldPrice: null,
-    desc: 'Herraje decorativo en latón bañado en oro para sillas de montar de lujo.',
-    rating: 4.5, reviews: 9, category: 'Casqueras',
-    img: '/img/correa.jpeg',
-  },
+const CATEGORY_TABS = [
+  'Todos', 'Sombreros', 'Sillas de Montar',
+  'Botas', 'Frenos & Bocados', 'Cotizas', 'Casqueras',
 ];
 
+const SIDEBAR_CATS = [
+  ['Sombreros', 24], ['Sillas de Montar', 12],
+  ['Frenos & Bocados', 8], ['Cotizas', 15], ['Casqueras', 6],
+];
+
+const MATERIALS = ['Cuero Crudo', 'Fieltro Pelo', 'Plata & Oro'];
+
+// ── Subcomponentes ─────────────────────────────────────────────
 const CATEGORIES_DATA = [
   { name: 'Sillas de Montar', count: 12, img: '/img/silla.jpeg' },
   { name: 'Botas & Cotizas',  count: 28, img: '/img/botas.jpeg' },
@@ -99,41 +66,7 @@ const TESTIMONIALS_DATA = [
   },
 ];
 
-const CATEGORY_TABS = [
-  'Todos', 'Sombreros', 'Sillas de Montar',
-  'Botas', 'Frenos & Bocados', 'Cotizas', 'Casqueras',
-];
 
-const SIDEBAR_CATS = [
-  ['Sombreros', 24], ['Sillas de Montar', 12],
-  ['Frenos & Bocados', 8], ['Cotizas', 15], ['Casqueras', 6],
-];
-
-const MATERIALS = ['Cuero Crudo', 'Fieltro Pelo', 'Plata & Oro'];
-
-// ── Subcomponentes ─────────────────────────────────────────────
-
-/** Renders a row of star icons */
-function StarRating({ rating }) {
-  return (
-    <div className="stars">
-      {[1, 2, 3, 4, 5].map(i => {
-        const filled = i <= Math.floor(rating);
-        const half   = !filled && i === Math.ceil(rating) && !Number.isInteger(rating);
-        return (
-          <svg key={i} viewBox="0 0 24 24" width="14" height="14"
-            fill={filled || half ? GOLD : 'none'}
-            stroke={filled || half ? GOLD : '#333'}
-            strokeWidth="2"
-            style={half ? { clipPath: 'inset(0 50% 0 0)' } : {}}
-          >
-            <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
-          </svg>
-        );
-      })}
-    </div>
-  );
-}
 
 /** Single product card */
 function ProductCard({ product, onAddToCart, onAddToWish }) {
@@ -175,7 +108,27 @@ function ProductCard({ product, onAddToCart, onAddToWish }) {
     </div>
   );
 }
-
+/** Renders a row of star icons */
+function StarRating({ rating }) {
+  return (
+    <div className="stars">
+      {[1, 2, 3, 4, 5].map(i => {
+        const filled = i <= Math.floor(rating);
+        const half   = !filled && i === Math.ceil(rating) && !Number.isInteger(rating);
+        return (
+          <svg key={i} viewBox="0 0 24 24" width="14" height="14"
+            fill={filled || half ? GOLD : 'none'}
+            stroke={filled || half ? GOLD : '#333'}
+            strokeWidth="2"
+            style={half ? { clipPath: 'inset(0 50% 0 0)' } : {}}
+          >
+            <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+          </svg>
+        );
+      })}
+    </div>
+  );
+}
 /** Single testimonial card */
 function TestimonialCard({ testimonial }) {
   return (
@@ -226,6 +179,47 @@ export default function AperosLanding() {
   const [email,             setEmail]              = useState('');
   const [subscribed,        setSubscribed]         = useState(false);
 
+  const [productos, setProductos] = useState([]);
+  // ¡NUEVO! Estados para el formulario de agregar producto
+  const [nuevoNombre, setNuevoNombre] = useState('');
+  const [nuevoPrecio, setNuevoPrecio] = useState('');
+  const [nuevaCategoria, setNuevaCategoria] = useState('Accesorios');
+
+  useEffect(() => {
+    fetch('http://localhost:3000/api/productos')
+      .then(respuesta => respuesta.json())
+      .then(datos => setProductos(datos))
+      .catch(error => console.error("Error conectando al backend:", error));
+  }, []);
+// ¡NUEVO! Función para enviar el producto al backend
+  const agregarProductoAlServidor = (e) => {
+    e.preventDefault(); // Evita que la página se recargue
+
+    // Preparamos el paquete con los datos que escribiste
+    const nuevoPaquete = {
+      name: nuevoNombre,
+      price: nuevoPrecio,
+      category: nuevaCategoria,
+      desc: 'Producto nuevo agregado desde el panel de administración.'
+    };
+
+    // Llamamos al mensajero usando el método POST
+    fetch('http://localhost:3000/api/productos', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(nuevoPaquete) // Convertimos el paquete a JSON
+    })
+      .then(respuesta => respuesta.json())
+      .then(datosRecibidos => {
+        // Actualizamos la pantalla con la nueva lista que nos devolvió el servidor
+        setProductos(datosRecibidos.productos);
+        // Limpiamos el formulario
+        setNuevoNombre('');
+        setNuevoPrecio('');
+      })
+      .catch(error => console.error("Error al guardar:", error));
+  };
+
   // — Refs —
   const sliderRef = useRef(null);
 
@@ -260,10 +254,10 @@ export default function AperosLanding() {
 
   // — Derived —
   const filteredProducts = activeCategory === 'Todos'
-    ? PRODUCTS
-    : PRODUCTS.filter(p => p.category === activeCategory);
+    ? productos
+    : productos.filter(p => p.category === activeCategory);
 
-  // — Handlers —
+    // — Handlers —
   const addToCart = ()          => setCartCount(c => c + 1);
   const addToWish = ()          => setWishCount(c => c + 1);
   const clearFilters = ()       => { setActiveCategory('Todos'); setSelectedMaterials([]); setPriceRange(30); };
@@ -510,7 +504,20 @@ export default function AperosLanding() {
                   </button>
                 ))}
               </div>
-
+{/* ¡NUEVO! Panel de Administrador Oculto */}
+              <div style={{ background: '#f9f9f9', padding: '20px', marginBottom: '30px', borderRadius: '8px', border: '1px dashed #d4af37' }}>
+                <h3>🛠️ Agregar Nuevo Producto (Admin)</h3>
+                <form onSubmit={agregarProductoAlServidor} style={{ display: 'flex', gap: '10px', marginTop: '10px' }}>
+                  <input type="text" placeholder="Nombre (Ej: Espuelas de Plata)" value={nuevoNombre} onChange={e => setNuevoNombre(e.target.value)} required style={{ padding: '8px' }} />
+                  <input type="text" placeholder="Precio (Ej: $150.000)" value={nuevoPrecio} onChange={e => setNuevoPrecio(e.target.value)} required style={{ padding: '8px' }} />
+                  <select value={nuevaCategoria} onChange={e => setNuevaCategoria(e.target.value)} style={{ padding: '8px' }}>
+                    <option value="Accesorios">Accesorios</option>
+                    <option value="Frenos & Bocados">Frenos & Bocados</option>
+                    <option value="Sillas de Montar">Sillas de Montar</option>
+                  </select>
+                  <button type="submit" className="btn-gold" style={{ padding: '8px 16px' }}>Guardar Producto</button>
+                </form>
+              </div>
               <div className="products-grid">
                 {filteredProducts.map(p => (
                   <ProductCard
